@@ -16,6 +16,7 @@ bot.on('ready',() =>{
 
 
     let myGuild = bot.guilds.cache.get(serverID);
+    let memberCount =  myGuild.memberCount;
 
     
     let m = myGuild.members.cache.filter(member => !member.user.bot).size;
@@ -33,9 +34,10 @@ bot.on('ready',() =>{
     MemberCountChannelBots.setName('Bots: ' + b).catch(error => console.log(error));
 
 
-    console.log(myGuild.memberCount);
+    console.log(memberCount);
 
     setInterval(() => {
+        let memberCount =  myGuild.memberCount;
 
     
         let m = myGuild.members.cache.filter(member => !member.user.bot).size;
@@ -53,7 +55,7 @@ bot.on('ready',() =>{
         MemberCountChannelBots.setName('Bots: ' + b).catch(error => console.log(error));
 
 
-        console.log(myGuild.memberCount);
+        console.log(memberCount);
     }, 600000);
 
  })
@@ -75,7 +77,7 @@ bot.on('ready',() =>{
     let MemberCountChannelBots = myGuild.channels.cache.get(channelIDBots);
     MemberCountChannelBots.setName('Bots: ' + b).catch(error => console.log(error));
 
-    console.log(myGuild.memberCount);
+    console.log(memberCount);
  }) 
  
  bot.on('guildMemberRemove', member =>{
