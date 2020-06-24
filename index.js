@@ -5,10 +5,10 @@ const bot = new Discord.Client();
 
 let prefix = 'c!';
 
-let serverID = '724000090246742087';
-let channelIDTotal = '725005202759090197';
-let channelIDMembers = '725005270295511212';
-let channelIDBots = '725005299198459984';
+let serverID = '724728846439415911';
+let channelIDTotal = '725271962137395240';
+let channelIDMembers = '725271996593733654';
+let channelIDBots = '725272017976426577';
 bot.on('ready',() =>{
    
 
