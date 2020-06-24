@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 
-let prefix = '!!!';
+let prefix = 'c!';
 
 let serverID = '724000090246742087';
 let channelIDTotal = '725005202759090197';
