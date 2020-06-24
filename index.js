@@ -99,10 +99,10 @@ bot.on('ready',() =>{
 
 bot.on('message', (message) =>{
     const parts = message.content.split(' ');
+    const command = parts.shift().toLowerCase();
 
 
-
-    if(parts[0] === '!!!stats') {
+    if(command === '!!!stats') {
         
         let guild = bot.guilds.cache.get(serverID);
             let co = guild.memberCount;
@@ -126,7 +126,7 @@ bot.on('message', (message) =>{
         
     }
 
-    if(parts[0] === '!!!help'){
+    if(command === '!!!help'){
 
         let help = new Discord.MessageEmbed()
         .setColor('#0099ff')
