@@ -9,6 +9,9 @@ let channelIDBots = '725005299198459984';
 bot.on('ready',() =>{
    
 
+    bot.user.setActivity(`!!!help`,{type: 'LISTENING'});
+
+
     let myGuild = bot.guilds.cache.get(serverID);
     let memberCount =  myGuild.memberCount;
 
