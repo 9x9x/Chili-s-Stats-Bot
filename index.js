@@ -2,6 +2,9 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
+
+let prefix = '!!!';
+
 let serverID = '724000090246742087';
 let channelIDTotal = '725005202759090197';
 let channelIDMembers = '725005270295511212';
@@ -9,7 +12,7 @@ let channelIDBots = '725005299198459984';
 bot.on('ready',() =>{
    
 
-    bot.user.setActivity(`!!!help`,{type: 'LISTENING'});
+    bot.user.setActivity(prefix + `help`,{type: 'WATCHING'});
 
 
     let myGuild = bot.guilds.cache.get(serverID);
@@ -102,7 +105,7 @@ bot.on('message', (message) =>{
     const command = parts.shift().toLowerCase();
 
 
-    if(command === '!!!stats') {
+    if(command === prefix + 'stats') {
         
         let guild = bot.guilds.cache.get(serverID);
             let co = guild.memberCount;
@@ -126,7 +129,7 @@ bot.on('message', (message) =>{
         
     }
 
-    if(command === '!!!help'){
+    if(command === prefix + 'help'){
 
         let help = new Discord.MessageEmbed()
         .setColor('#0099ff')
@@ -135,7 +138,7 @@ bot.on('message', (message) =>{
         .setDescription('Help')
         .setThumbnail('https://cdn.discordapp.com/attachments/725221011603062795/725221115940831292/new_chilis.gif')
         .addFields(
-            { name: '**' + 'Commands: ' + '**', value: 'Prefix: !!!' + '```\n!!!help: Show this help embed ```' + '\u200B' + '```\n!!!stats: Show server Members Stats```' },
+            { name: '**' + 'Commands: ' + '**', value: 'Prefix: ' + prefix + '```\n!!!help: Show this help embed ```' + '\u200B' + '```\n!!!stats: Show server Members Stats```' },
             { name: '**' + 'Info: ' + '**', value: '```\nEvery 10 mins the channels will update !```' }
         )
         .addField('**' + 'Server: ' + '**', "Chili's", )
