@@ -133,6 +133,7 @@ bot.on('message', (message) =>{
         .setThumbnail('https://cdn.discordapp.com/attachments/725221011603062795/725221115940831292/new_chilis.gif')
         .addFields(
             { name: '**' + 'Commands: ' + '**', value: 'Prefix: !!!' + '```\n!!!help: Show this help embed ```' + '\u200B' + '```\n!!!stats: Show server Members Stats```' },
+            { name: '**' + 'Info: ' + '**', value: '```\nEvery 10 mins the channels will update !' }
         )
         .addField('**' + 'Server: ' + '**', "Chili's", )
         .setTimestamp()
